@@ -82,8 +82,8 @@ void dumpMidi()
 
 Midi* openMidiDevice(std::string name, bool verboseSuccess = false, bool verboseError = false)
 {
-//	Midi* newMidi;
-	Midi* newMidi = new Midi();
+	Midi* newMidi;
+	newMidi = new Midi();
 	newMidi->readFrom(name.c_str());
 	newMidi->writeTo(name.c_str());
 #ifdef PARSE_MIDI
