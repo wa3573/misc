@@ -332,12 +332,12 @@ bool setup(BelaContext *context, void *userData)
 		gDigitalEnabled = 1;
 
 	// add here other devices you need
-//	gMidiPortNames.push_back("hw:1,0,0");
+	//gMidiPortNames.push_back("hw:1,0,0");
 	gMidiPortNames.push_back("hw:0,0,0");
 	//gMidiPortNames.push_back("hw:1,0,1");
 
-//	scope.setup(gScopeChannelsInUse, context->audioSampleRate);
-//	gScopeOut = new float[gScopeChannelsInUse];
+	scope.setup(gScopeChannelsInUse, context->audioSampleRate);
+	gScopeOut = new float[gScopeChannelsInUse];
 
 	// Check first of all if the patch file exists. Will actually open it later.
 	char file[] = "_main.pd";
